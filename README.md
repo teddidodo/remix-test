@@ -31,23 +31,16 @@ yarn // I used yarn
 ```
 
 Set this on **.env** file:
-I will set this based on the information provided by the docker compose. We can change the information here according your requirements.
+I will set this based on the information provided by the docker compose. We can change the information here according to your requirements.
 ```sh
 DATABASE_URL="postgresql://postgres:postgres@localhost:5600/{test-remix}"
 ```
+
+Run the migration with Prisma
 ```sh
 npx prisma init
 npx prisma migrate dev --name create-post-table
 ```
-
-
-Then run the app in production mode:
-
-```sh
-yarn run dev
-```
-
-Now you'll need to pick a host to deploy it to.
 
 ### Run application
 First, install packages from package.json (assume we are in blog folder):
@@ -56,8 +49,7 @@ First, install packages from package.json (assume we are in blog folder):
 yarn // I used yarn
 ```
 
-Then run the app in production mode:
-
+Then run the app:
 ```sh
 yarn run dev
 ```
