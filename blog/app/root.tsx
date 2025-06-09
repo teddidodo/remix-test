@@ -9,7 +9,6 @@ import {
 } from "@remix-run/react";
 import styles from "./styles/global.css";
 import { LinksFunction } from "@remix-run/node";
-// And add this to your links function
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
 ];

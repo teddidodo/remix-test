@@ -1,4 +1,3 @@
-// app/routes/posts.$id.tsx
 import { json } from "@remix-run/node";
 import { Form, Link, useLoaderData } from "@remix-run/react";
 import { getPost, deletePost } from "~/models/post.server";

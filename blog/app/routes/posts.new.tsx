@@ -1,5 +1,3 @@
-// app/routes/posts.new.tsx
-import { PrismaClient } from "@prisma/client";
 import { json, redirect } from "@remix-run/node";
 import { Form, Link, useActionData } from "@remix-run/react";
 import { createPost } from "~/models/post.server";

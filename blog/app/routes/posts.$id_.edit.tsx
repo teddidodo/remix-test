@@ -1,4 +1,3 @@
-// app/routes/posts.$id_.edit.tsx
 import { json, redirect, type LoaderFunctionArgs, type ActionFunctionArgs } from "@remix-run/node";
 import { Form, Link, useActionData, useLoaderData } from "@remix-run/react";
 import { getPost, updatePost } from "~/models/post.server";
