@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres-test-remix
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: test-remix
+    volumes:
+      - pgdata:/var/lib/postgresql/data-test-remix
+    ports:
+      - "5600:5432"
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:

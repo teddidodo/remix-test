@@ -1,0 +1,104 @@
+/* app/styles/global.css */
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+  }
+  
+  /* Custom components using Tailwind-like approach */
+  .container {
+    @apply max-w-6xl mx-auto px-4;
+  }
+  
+  .header {
+    @apply bg-blue-600 text-white py-4 mb-8;
+  }
+  
+  .btn {
+    @apply bg-blue-600 text-white border-none py-2 px-4 rounded cursor-pointer no-underline inline-block text-sm transition-colors;
+  }
+  
+  .btn:hover {
+    @apply bg-blue-700;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600;
+  }
+  
+  .btn-danger:hover {
+    @apply bg-red-700;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6 mb-4;
+  }
+  
+  .form-group {
+    @apply mb-4;
+  }
+  
+  .form-control {
+    @apply w-full p-2 border border-gray-300 rounded text-base focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100;
+  }
+  
+  label {
+    @apply block mb-1 font-medium;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .post-meta {
+    @apply text-gray-500 text-sm mb-4;
+  }
+  
+  .post-actions {
+    @apply flex gap-2 flex-wrap;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      @apply px-2;
+    }
+    
+    .card {
+      @apply p-4;
+    }
+    
+    .post-actions {
+      @apply flex-col;
+    }
+    
+    .btn {
+      @apply w-full text-center;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      @apply px-6;
+    }
+    
+    .post-actions {
+      @apply justify-start;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .post-actions {
+      @apply justify-end;
+    }
+  }
